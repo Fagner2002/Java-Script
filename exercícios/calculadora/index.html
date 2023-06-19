@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <style>
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    .calculator {
+      width: 300px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .result-field {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px;
+      font-size: 18px;
+      text-align: right;
+    }
+    
+    .keypad {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 5px;
+    }
+    
+    button {
+      padding: 10px;
+      font-size: 16px;
+      text-align: center;
+      background-color: #f2f2f2;
+      border: none;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #e0e0e0;
+    }
+    
+    </style>
+
+</head>
+
+<body>
+  <div class="calculator">
+    <input type="text" id="result" class="result-field" readonly>
+    <div class="keypad">
+      <!-- Botões da calculadora -->
+      <button onclick="clearResult()">C</button>
+      <button onclick="appendToResult('/')">/</button>
+      <button onclick="appendToResult('7')">7</button>
+      <button onclick="appendToResult('8')">8</button>
+      <button onclick="appendToResult('9')">9</button>
+      <button onclick="appendToResult('*')">*</button>
+      <button onclick="appendToResult('4')">4</button>
+      <button onclick="appendToResult('5')">5</button>
+      <button onclick="appendToResult('6')">6</button>
+      <button onclick="appendToResult('-')">-</button>
+      <button onclick="appendToResult('1')">1</button>
+      <button onclick="appendToResult('2')">2</button>
+      <button onclick="appendToResult('3')">3</button>
+      <button onclick="appendToResult('+')">+</button>
+      <button onclick="appendToResult('0')">0</button>
+      <button onclick="calculate()">=</button>	
+    </div>da
+  </div>
+
+
+</body>
+</html>
+
+<script>
+function appendToResult(value) {
+  document.getElementById('result').value += value;
+}
+
+function clearResult() {
+  document.getElementById('result').value = '';
+}
+
+function calculate() {
+  let result = document.getElementById('result').value;
+  let answer = eval(result);
+  document.getElementById('result').value = answer;
+}
+</script>
