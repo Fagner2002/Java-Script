@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            text-align: center;
+            border: solid 4px black;
+            /* top: 100px; */
+            /* bottom: 100px; */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Antes e Depois</h1>
+        <button onclick="start()">Antecessor e Sucessor</button>
+    </div>
+    <script>
+        const start = () => {
+            let numero = parseInt(prompt("Digite um número qualquer"));
+
+            let antecessor = numero - 1;
+            let sucesosr   = numero + 1;
+
+            alert(
+                "Antes de " + numero + ", temos o número " + antecessor + "." +
+                
+                "Depois de " + numero + ", temos o número " + sucesosr + "."
+                );
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    border: solid 3px black;
+    padding: 40px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: calc(100% / 4); /* Define a largura dos cards para ocupar 1/6 do container */
+    box-sizing: border-box; /* Inclui a largura da borda no cálculo da largura do card */
+    text-align: center;
+  }
+
+  .name {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .type {
+    margin: 5px 0;
+  }
