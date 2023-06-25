@@ -16,19 +16,23 @@
     flex-wrap: wrap;
   }
 
-  .card {
+.card {
     border: 1px solid #ccc;
     padding: 10px;
     width: calc(100% / 4); /* Define a largura dos cards para ocupar 1/6 do container */
     box-sizing: border-box; /* Inclui a largura da borda no cálculo da largura do card */
     text-align: center;
-  }
+}
 
-  .name {
+.name {
     font-size: 18px;
     margin: 0;
-  }
+}
 
-  .type {
+.type {
     margin: 5px 0;
-  }
+}
+
+.numero{
+    margin: 5px 0;
+}

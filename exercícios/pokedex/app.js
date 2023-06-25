@@ -23,9 +23,15 @@ async function getPokemonData(i) {
     typeElement.classList.add('type');
     typeElement.textContent = tiposPokemon;
 
+    const numeroPokemon = document.createElement('p');
+    numeroPokemon.classList.add('numero');
+    numeroPokemon.textContent = i;
+
     cardDiv.appendChild(imgElement);
+    cardDiv.appendChild(numeroPokemon);
     cardDiv.appendChild(nameElement);
     cardDiv.appendChild(typeElement);
+    
 
     document.getElementById('pokemon-cards').appendChild(cardDiv);
   } catch (error) {
