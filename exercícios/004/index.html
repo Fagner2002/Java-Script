@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>005</title>
+</head>
+<body>
+
+    <h1>Calculando Troco</h1>
+
+    <button onclick="store()">Compras</button>
+    
+    <script>
+
+        let store = () => {
+            let nomeProduto = prompt("Que produto você está comprando");
+            let valorProduto = parseFloat(prompt("Quanto custa " + nomeProduto + " que você está comprando"));
+            let money = parseFloat(prompt("Qual foi o valor você deu parar paga o " + nomeProduto + "?"));
+            let troco = money - valorProduto;
+            let nota = alert("Você comprou " + nomeProduto + "que custou R$ " + valorProduto + ". Deu R$ " + money + " em dinheiro e vai receber R$ " + troco + " de troco. Volte sempre")
+        }
+    </script>
+</body>
+</html>
